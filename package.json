@@ -1,0 +1,42 @@
+{
+  "name": "btb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "development:client": "npx webpack-cli serve --mode development --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@emotion/babel-plugin": "^11.13.5",
+    "@emotion/react": "^11.14.0",
+    "@eslint/js": "^9.24.0",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@popperjs/core": "^2.11.8",
+    "babel-loader": "^10.0.0",
+    "bootstrap": "^5.3.5",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.24.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "prettier-plugin-jsdoc": "^1.3.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.0",
+    "sass": "^1.86.3",
+    "sass-loader": "^16.0.5",
+    "stylelint": "^16.17.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "typescript-eslint": "^8.29.0",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
+}
