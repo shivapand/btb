@@ -76,6 +76,10 @@ export default {
         test: /\.(ttf|eot|woff|woff2)$/,
         exclude: /node_modules/,
         use: 'file-loader'
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack']
       }
     ]
   },

@@ -2,13 +2,14 @@ import { useContext, useEffect } from 'react';
 import { Outlet } from 'react-router';
 
 import { Store } from 'client/store';
-import initialize from 'client/store/action/initialize';
+import actionInitialize from 'client/store/action/initialize';
+import './index.scss';
 
 const Route = () => {
   const { dispatch } = useContext(Store);
 
   useEffect(() => {
-    dispatch(initialize({ initialized: true }));
+    dispatch(actionInitialize({ initialized: true }));
   }, [dispatch]);
 
   return (

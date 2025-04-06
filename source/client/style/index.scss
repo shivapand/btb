@@ -6,3 +6,66 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-family-Montserrat: 'Montserrat';
+$fs-sm-5: 12px;
+$level-1: #fff;
+$blue_level_3: #0a152c;
+$blue_level_11: #0d3179;
+
+body {
+  font-family: $font-family-Montserrat;
+  background: $blue_level_3;
+  color: $level-1;
+}
+
+.btn {
+  border-radius: 5px;
+}
+
+.btn-primary {
+  border: none;
+  background: $blue_level_11;
+
+  &:hover {
+    background: $blue_level_11;
+  }
+}
+
+.btn-outline-light {
+  &:hover {
+    background: transparent;
+    color: var(--bs-light);
+  }
+}
+
+.label {
+  color: $level-1 !important;
+  font-size: $fs-sm-5;
+}
+
+[data-title] {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    top: 25px;
+    content: attr(data-title);
+    white-space: nowrap;
+    visibility: hidden;
+    padding: 5px 10px;
+    font-size: $fs-sm-5;
+    line-height: 16px;
+    border: 1px solid rgba($level-1, 0.25);
+    background-color: $blue_level_11;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}

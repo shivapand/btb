@@ -1,0 +1,114 @@
+@import './Component/Copyright/index';
+@import './Component/Policy/index';
+
+$fs-md-4: 20px;
+$fs-md-1: 16px;
+$blue-level-4: #071d49;
+$level-1: #fff;
+$fw-semibold: 600;
+
+.Login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+    .smartsense-logo-container {
+      width: 250px;
+      height: 90px;
+      text-align: center;
+    }
+  }
+
+  .middle {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+      width: 300px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      legend {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: $fs-md-4;
+      }
+
+      .fieldset {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        ._fieldset {
+          width: 100%;
+
+          &:first-child {
+            margin-bottom: 20px;
+          }
+
+          input {
+            height: 50px;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            background: $blue-level-4;
+            color: $level-1;
+
+            &::placeholder {
+              color: $level-1;
+            }
+          }
+        }
+      }
+
+      .submit-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        button[type='submit'] {
+          width: 300px;
+          height: 40px;
+          font-size: $fs-md-1;
+          font-weight: $fw-semibold;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    text-align: center;
+
+    .copyright-container {
+      margin-bottom: 10px;
+
+      .Copyright {
+        @extend %Copyright;
+      }
+    }
+
+    .policy-container {
+      .Policy {
+        @extend %Policy;
+      }
+    }
+  }
+}
