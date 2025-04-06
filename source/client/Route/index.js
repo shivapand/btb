@@ -12,7 +12,7 @@ const Route = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className='Route'>
       <Outlet />
     </div>
   );

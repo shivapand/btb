@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "development:client": "npx webpack-cli serve --mode development --config webpack.config.js"
+    "development:client": "cross-env NODE_ENV=development npx webpack-cli serve --mode development --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,11 +20,16 @@
     "@popperjs/core": "^2.11.8",
     "babel-loader": "^10.0.0",
     "bootstrap": "^5.3.5",
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
+    "dotenv": "^16.4.7",
+    "encrypt-storage": "^2.14.6",
     "eslint": "^9.24.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.0.0",
     "html-webpack-plugin": "^5.6.3",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.9.2",
     "prettier-plugin-jsdoc": "^1.3.2",
     "react": "^19.1.0",
