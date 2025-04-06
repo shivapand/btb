@@ -1,15 +1,13 @@
 import { useContext, useEffect } from 'react';
 
 import { Store } from 'client/store';
-import storeTest from 'client/store/action/storeTest';
+import initialize from 'client/store/action/initialize';
 
 const Route = () => {
-  const { store, dispatch } = useContext(Store);
-
-  console.log('HERE>>', store);
+  const { dispatch } = useContext(Store);
 
   useEffect(() => {
-    dispatch(storeTest());
+    dispatch(initialize({ initialized: true }));
   }, [dispatch]);
 
   return (

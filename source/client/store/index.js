@@ -3,15 +3,15 @@ import { createContext, useReducer, useCallback } from 'react';
 const Store = createContext(undefined);
 
 const _store = {
-  test: false
+  initialized: false
 };
 
-const reducer = (store, action) => {
-  switch (action.type) {
-    case 'STORE_TEST':
+const reducer = (store, { type, result }) => {
+  switch (type) {
+    case 'STORE_INITIALIZE':
       return {
         ...store,
-        test: true
+        ...result
       };
 
     default:

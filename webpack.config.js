@@ -65,5 +65,16 @@ export default {
     alias: {
       client: path.join(process.cwd(), 'source/client')
     }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          name: '_bundle'
+        }
+      }
+    }
   }
 };
