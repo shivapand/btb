@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react';
+import { Outlet } from 'react-router';
 
 import { Store } from 'client/store';
 import initialize from 'client/store/action/initialize';
@@ -12,7 +13,7 @@ const Route = () => {
 
   return (
     <div>
-      <div>MAHA</div>
+      <Outlet />
     </div>
   );
 };

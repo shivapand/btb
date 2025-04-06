@@ -55,6 +55,7 @@ export default {
   devServer: {
     hot: true,
     liveReload: true,
+    historyApiFallback: true,
     client: {
       overlay: {
         warnings: false
