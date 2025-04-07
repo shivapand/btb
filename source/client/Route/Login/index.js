@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState } from 'react';
 
 import { Store } from '../../store';
 import actionUserAuthentication from 'client/store/action/user/authenticate.js';
@@ -8,23 +8,13 @@ import Policy from './Component/Policy';
 import './index.scss';
 
 const Login = () => {
-  const { dispatch, store } = useContext(Store);
+  const { dispatch } = useContext(Store);
 
   const [username, usernameSet] = useState();
 
   const [password, passwordSet] = useState();
 
   const [loading, loadingSet] = useState();
-
-  useEffect(() => {
-    !store.user &&
-      dispatch(
-        actionUserAuthentication({
-          username: 'CF@ecolibrium.io',
-          password: '9d72a72175b74153c8003e08a3d9ad5a'
-        })
-      );
-  }, [store.user, dispatch]);
 
   return (
     <div className='Login'>
@@ -43,6 +33,12 @@ const Login = () => {
             event.stopPropagation();
 
             loadingSet(true);
+
+            dispatch(actionUserAuthentication({ username, password })).finally(
+              () => {
+                loadingSet(false);
+              }
+            );
           }}
         >
           <legend>Log In</legend>

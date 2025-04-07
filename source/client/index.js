@@ -9,21 +9,34 @@ import 'client/style/index.scss';
 
 const Login = lazy(() => import('client/Route/Login'));
 
+const Dashboard = lazy(() => import('client/Route/Dashboard'));
+
+const fallback = 'Loading...';
+
 createRoot(document.body).render(
-  <StoreProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
       <Routes>
         <Route path='/' element={<_Route />}>
           <Route
             path='Login'
             element={
-              <Suspense fallback='Loading...'>
+              <Suspense fallback={fallback}>
                 <Login />
               </Suspense>
             }
           />
+
+          <Route
+            path='Dashboard'
+            element={
+              <Suspense fallback={fallback}>
+                <Dashboard />
+              </Suspense>
+            }
+          ></Route>
         </Route>
       </Routes>
-    </BrowserRouter>
-  </StoreProvider>
+    </StoreProvider>
+  </BrowserRouter>
 );
